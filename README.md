@@ -72,8 +72,10 @@ sam local start-api --host 0.0.0.0
 [http://192.168.33.10:3000/hello](http://192.168.33.10:3000/hello)に接続して確認する
 
 ### CheckStyleのセットアップ
+pom.xmlファイルにCheckStyleのレポジトリ情報を追加して以下のコマンドを実行する
 ```
- mvn checkstyle:check
+mvn install
+mvn checkstyle:check
 ```
 
 **[⬆ back to top](#構成)**
