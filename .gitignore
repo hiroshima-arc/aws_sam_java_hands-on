@@ -24,5 +24,6 @@ hs_err_pid*
 
 .idea
 aws_sam_java_hands-on.iml
+HelloWorld.iml
 .vagrant
 target

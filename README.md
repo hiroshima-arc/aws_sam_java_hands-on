@@ -71,6 +71,11 @@ sam local start-api --host 0.0.0.0
 ```
 [http://192.168.33.10:3000/hello](http://192.168.33.10:3000/hello)に接続して確認する
 
+### CheckStyleのセットアップ
+```
+ mvn checkstyle:check
+```
+
 **[⬆ back to top](#構成)**
 
 # 参照 #
@@ -79,4 +84,5 @@ sam local start-api --host 0.0.0.0
 + [Amazon Linux2にDockerをインストールする](https://qiita.com/reoring/items/0d1f556064d363f0ccb8)
 + [Pythonのパッケージ管理システムpipのインストールと使い方](https://uxmilk.jp/12691) 
 + [aws-sam-local 改め aws-sam-cli の新機能 sam init を試す](https://qiita.com/hayao_k/items/841026f9675d163b58d5)
-+ [[Java全般]SDKMAN（旧gvm）でJavaやGrvoovyをインストール](https://qiita.com/saba1024/items/967ee3d8a79440a97336) 
++ [[Java全般]SDKMAN（旧gvm）でJavaやGrvoovyをインストール](https://qiita.com/saba1024/items/967ee3d8a79440a97336)
++ [Introduction to CheckStyle](https://www.baeldung.com/checkstyle-java) 
