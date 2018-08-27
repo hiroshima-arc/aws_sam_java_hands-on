@@ -78,6 +78,21 @@ mvn install
 mvn checkstyle:check
 ```
 
+### コードカバレッジのセットアップ
+pom.xmlファイルにJaCoCoのレポジトリ情報を追加して以下のコマンドを実行する
+```bash
+mvn install
+mvn help:describe -Dplugin=org.jacoco:jacoco-maven-plugin -Ddetail
+```
+カバレッジレポートを作る
+```bash
+mvn clean jacoco:prepare-agent test jacoco:report
+cd target/site/jacoco/
+python -m SimpleHTTPServer
+
+```
+[http://192.168.33.10:8000/](http://192.168.33.10:8000/)に接続して確認する
+
 **[⬆ back to top](#構成)**
 
 # 参照 #
@@ -87,4 +102,5 @@ mvn checkstyle:check
 + [Pythonのパッケージ管理システムpipのインストールと使い方](https://uxmilk.jp/12691) 
 + [aws-sam-local 改め aws-sam-cli の新機能 sam init を試す](https://qiita.com/hayao_k/items/841026f9675d163b58d5)
 + [[Java全般]SDKMAN（旧gvm）でJavaやGrvoovyをインストール](https://qiita.com/saba1024/items/967ee3d8a79440a97336)
-+ [Introduction to CheckStyle](https://www.baeldung.com/checkstyle-java) 
++ [Introduction to CheckStyle](https://www.baeldung.com/checkstyle-java)
++ [JaCoCoでJavaのコードカバレッジレポートを作る](https://ishiis.net/2016/10/13/jacoco-coverage/)  
