@@ -29,6 +29,21 @@ vagrant up
 vagrant ssh
 ```
 
+### 開発パッケージのインストール
++ aws-sam-cliのインストール
+```bash
+pip install --user aws-sam-cli
+curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.3/install.sh | bash
+source ~/.bashrc 
+curl -s api.sdkman.io | bash
+source "/home/vagrant/.sdkman/bin/sdkman-init.sh"
+sdk list maven
+sdk use maven 3.5.4
+sdk list java
+sdk use java 8.0.181-zulu
+```
+
+
 **[⬆ back to top](#構成)**
 
 ## 配置
@@ -42,4 +57,8 @@ vagrant ssh
 
 # 参照 #
 + [Amazon Linux2にDockerをインストールする](https://qiita.com/reoring/items/0d1f556064d363f0ccb8)
++ [Pythonのパッケージ管理システムpipのインストールと使い方](https://uxmilk.jp/12691)
++ [Amazon Linux2にDockerをインストールする](https://qiita.com/reoring/items/0d1f556064d363f0ccb8)
 + [Pythonのパッケージ管理システムpipのインストールと使い方](https://uxmilk.jp/12691) 
++ [aws-sam-local 改め aws-sam-cli の新機能 sam init を試す](https://qiita.com/hayao_k/items/841026f9675d163b58d5)
++ [[Java全般]SDKMAN（旧gvm）でJavaやGrvoovyをインストール](https://qiita.com/saba1024/items/967ee3d8a79440a97336) 
