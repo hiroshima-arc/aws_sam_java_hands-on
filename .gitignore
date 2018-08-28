@@ -30,3 +30,4 @@ target
 .gradle
 docs/.asciidoctor
 .env
+packaged.yaml
