@@ -117,6 +117,15 @@ find . -mtime +10950 -print -exec touch {} \;
 **[⬆ back to top](#構成)**
 
 ## 運用
+### スタックの削除
+```bash
+aws cloudformation delete-stack --stack-name nodejs-handson
+```
+### S３バケットの削除
+```bash
+aws s3 rb s3://nodejs-handson --force
+```
+
 **[⬆ back to top](#構成)**
 
 ## 開発
