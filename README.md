@@ -43,6 +43,26 @@ sdk list java
 sdk use java 8.0.181-zulu
 ```
 
+### ドキュメント環境構築
+```bash
+sdk list gradle
+sdk use gradle 4.9
+```
+ドキュメントのセットアップ
+```
+cd /vagrant/
+touch build.gradle
+```
+`build.gradle`を作成して以下のコマンドを実行
+```
+gradle build
+```
+ドキュメントの生成
+```bash
+gradle asciidoctor
+gradle livereload
+```
+[http://192.168.33.10:35729/](http://192.168.33.10:35729/)に接続して確認する
 
 **[⬆ back to top](#構成)**
 
@@ -104,3 +124,4 @@ python -m SimpleHTTPServer
 + [[Java全般]SDKMAN（旧gvm）でJavaやGrvoovyをインストール](https://qiita.com/saba1024/items/967ee3d8a79440a97336)
 + [Introduction to CheckStyle](https://www.baeldung.com/checkstyle-java)
 + [JaCoCoでJavaのコードカバレッジレポートを作る](https://ishiis.net/2016/10/13/jacoco-coverage/)  
++ [図入りのAsciiDoc記述からPDFを生成する環境をGradleで簡単に用意する](https://qiita.com/tokumoto/items/d37ab3de5bdbee307769) 

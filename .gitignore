@@ -27,3 +27,5 @@ aws_sam_java_hands-on.iml
 HelloWorld.iml
 .vagrant
 target
+.gradle
+docs/.asciidoctor
