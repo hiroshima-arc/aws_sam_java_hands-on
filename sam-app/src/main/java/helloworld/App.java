@@ -20,9 +20,10 @@ public class App implements RequestHandler<Object, Object> {
         Map<String, String> headers = new HashMap<>();
         headers.put("Content-Type", "application/json");
         headers.put("X-Custom-Header", "application/json");
+        headers.put("Access-Control-Allow-Origin", "*");
         try {
             final String pageContents = this.getPageContents("https://checkip.amazonaws.com");
-            String output = String.format("{ \"message\": \"hello world\", \"location\": \"%s\" }", pageContents);
+            String output = String.format("{ \"message\": \"Hello Java lambda world\", \"location\": \"%s\" }", pageContents);
             return new GatewayResponse(output, headers, 200);
         } catch (IOException e) {
             return new GatewayResponse("{}", headers, 400);
