@@ -31,3 +31,7 @@ target
 docs/.asciidoctor
 .env
 packaged.yaml
+.classpath
+.project
+.vscode
+.settings
