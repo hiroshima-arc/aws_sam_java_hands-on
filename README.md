@@ -8,7 +8,7 @@ AWS サーバーレスアプリケーションモデル (AWS SAM) ハンズオ�
 | ソフトウェア   | バージョン   | 備考        |
 |:---------------|:-------------|:------------|
 | java           |8    |             |
-| sam            |0.3.0  |             |
+| sam            |0.6.0  |             |
 | docker         |17.06.2  |             |
 | docker-compose |1.21.0  |             |
 | vagrant        |2.0.3  |             |
@@ -170,7 +170,7 @@ cd sam-app
 cd /vagrant/sam-app
 mvn install
 mvn test
-sam local generate-event api > event_file.json
+sam local generate-event apigateway aws-proxy > event_file.json
 sam local invoke HelloWorldFunction --event event_file.json
 sam local start-api --host 0.0.0.0
 ```
